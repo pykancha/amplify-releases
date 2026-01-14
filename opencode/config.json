@@ -1,0 +1,74 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "amplify-oai/gpt-5.2-codex",
+  "provider": {
+    "amplify-oai": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Amplify OpenAI",
+      "options": {
+        "baseURL": "{{BASE_URL}}/api/provider/openai",
+        "headers": {
+          "x-api-key": "{{API_KEY}}"
+        }
+      },
+      "models": {
+        "gpt-5.2-codex": {
+          "name": "GPT-5.2 Codex",
+          "limit": { "context": 200000, "output": 32000 }
+        },
+        "gpt-5.1-codex": {
+          "name": "GPT-5.1 Codex",
+          "limit": { "context": 200000, "output": 32000 }
+        }
+      }
+    },
+    "amplify": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Amplify Anthropic",
+      "options": {
+        "baseURL": "{{BASE_URL}}/api/provider/anthropic",
+        "headers": {
+          "x-api-key": "{{API_KEY}}"
+        }
+      },
+      "models": {
+        "claude-opus-4-5-20251001": {
+          "name": "Claude Opus 4.5",
+          "limit": { "context": 200000, "output": 32000 }
+        },
+        "claude-sonnet-4-5-20250929": {
+          "name": "Claude Sonnet 4.5",
+          "limit": { "context": 200000, "output": 32000 }
+        },
+        "claude-haiku-4-5-20251001": {
+          "name": "Claude Haiku 4.5",
+          "limit": { "context": 200000, "output": 32000 }
+        }
+      }
+    },
+    "amplify-gem": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Amplify Gemini",
+      "options": {
+        "baseURL": "{{BASE_URL}}/api/provider/openai",
+        "headers": {
+          "x-api-key": "{{API_KEY}}"
+        }
+      },
+      "models": {
+        "gemini-3-pro-preview": {
+          "name": "Gemini 3.0 Pro",
+          "limit": { "context": 1000000, "output": 65536 }
+        },
+        "gemini-3-flash-preview": {
+          "name": "Gemini 3.0 Flash",
+          "limit": { "context": 1000000, "output": 65536 }
+        },
+        "gemini-2.5-flash": {
+          "name": "Gemini 2.5 Flash",
+          "limit": { "context": 1000000, "output": 65536 }
+        }
+      }
+    }
+  }
+}
